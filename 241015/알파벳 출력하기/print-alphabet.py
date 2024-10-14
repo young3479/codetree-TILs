@@ -8,5 +8,5 @@ for i in range(n):
         if count <= 26:
             count+=1
         else:
-            count-=27
+            count-=26
     print()
