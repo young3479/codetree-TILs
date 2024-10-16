@@ -8,4 +8,5 @@ for i in nums:
         count += 1
     else:
         break
-print(sum(answer), int(sum(answer)/count))
+aver = sum(answer)/count
+print(sum(answer), f"{aver:.1f}")
