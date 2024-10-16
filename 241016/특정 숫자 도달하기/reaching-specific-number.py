@@ -8,4 +8,4 @@ for i in nums:
         count += 1
     else:
         break
-print(sum(answer), sum(answer)/count)
+print(sum(answer), int(sum(answer)/count))
