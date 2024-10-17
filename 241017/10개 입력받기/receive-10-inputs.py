@@ -10,4 +10,4 @@ for i in n:
     else:
         break
 
-print(answer, answer/count)
+print(answer, f"{answer/count:.1f}")
