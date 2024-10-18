@@ -1,6 +1,8 @@
 nums = list(map(int, input().split()))
-max_num = -999
-min_num = 999
+# 초기값을 리스트의 첫 번째 값으로 설정
+max_num = nums[0]
+min_num = nums[0]
+
 for i in nums:
     if i == 999 or i == -999:
         break
