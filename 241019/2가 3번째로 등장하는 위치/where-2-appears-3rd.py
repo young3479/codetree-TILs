@@ -9,6 +9,3 @@ for i in range(n):
     if nums[i] == 2:
         two_count += 1
         # print("2일때", i)
-        continue
-    else:
-        continue
