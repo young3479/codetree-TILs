@@ -1,5 +1,5 @@
 a, b = input().split()
-a, b = int(ord(a)), int(ord(b))
+a, b = ord(a), ord(b)
 if b>a:
     a, b = b, a
     
