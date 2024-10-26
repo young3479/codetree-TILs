@@ -3,12 +3,11 @@ positions = [list(map(int, input().split())) for _ in range(n)]
 moves = [[] for _ in range(11)]
 count = 0
 
-for i in positions:
-    moves[i[0]].append(i[1])
+for pigeon, pos in positions:
+    moves[pigeon].append(pos)
 
 for j in moves:
-    if len(j) >= 2:
-        for x in range(len(j)-1):
-            if j[x] != j[x+1]:
-                count += 1
+    for x in range(len(j)-1):
+        if j[x] != j[x+1]:
+            count += 1
 print(count)
