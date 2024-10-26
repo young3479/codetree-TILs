@@ -8,8 +8,6 @@ for i in positions:
 
 for j in moves:
     if len(j) >= 2:
-        # 앞뒤가 똑같으면 안됨. 즉 1->0 0->1로 상태가 바뀔때마다 체크
-        # 으아아아아악 어케 체크할까 너무 괴롭다.....
         for x in range(len(j)-1):
             if j[x] != j[x+1]:
                 count += 1
