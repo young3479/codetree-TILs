@@ -8,7 +8,7 @@ A, B, C = map(int, input().split())
 
 # 단 11,11,11 보다 앞서면 -1 출력
 
-if A < 11 or B < 11 and C < 11:
+if A < 11 and B < 11 and C < 11:
     print(-1)
 elif A == 11 and B < 11:
     print(-1)
