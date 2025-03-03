@@ -4,6 +4,8 @@
 # 시간이 24보다 크면 일이 하나 증가
 # 시간이 11, 11, 11 에서 시작하여 A, B, C와 동일할 때까지 진행
 
+# 시뮬레이션
+'''
 A, B, C = map(int, input().split())
 
 # 단 11,11,11 보다 앞서면 -1 출력
@@ -17,6 +19,9 @@ day, hour, minute = 11, 11, 11
 cnt = 0
 
 while (True):
+    minute += 1
+    cnt += 1
+    
     if day == A and hour == B and minute == C:
         break
 
@@ -28,7 +33,14 @@ while (True):
         day += 1
         hour = 0
 
-    minute += 1
-    cnt += 1
-
 print(cnt)
+'''
+
+A, B, C = map(int, input().split())
+
+diff = (A * 24 * 60 + B * 60 + C) - (11 * 24 * 60 + 11 * 60 + 11)
+
+if diff < 0:
+    print(-1)
+else:
+    print(diff)
