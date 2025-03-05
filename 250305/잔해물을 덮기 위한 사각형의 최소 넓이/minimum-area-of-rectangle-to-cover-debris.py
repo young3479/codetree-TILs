@@ -11,32 +11,33 @@ for i in range(a1, a2):
     for j in range(b1, b2):
         dp[i][j] = 0
 
-# cnt = 0
+
 # for x in range(2001):
 #     for y in range(2001):
 #         if dp[x][y] == 1:
 #             print(x, y)
-#             cnt += 1
+
 
 #가로 길이 2개중 더 큰것, 세로 길이 2개중 더 큰것 곱하기
-min_x, max_x = 2001, -1
-min_y, max_y = 2001, -1
+min_x = 2001
+max_x = 0
+min_y = 2001
+max_y = 0
 
-for i in range(2001):
-    for j in range(2001):
-        if dp[i][j] == 1:
-            if i < min_x:
-                min_x = i
-            if i > max_x:
-                max_x = i
-            if j < min_y:
-                min_y = j
-            if j > max_y:
-                max_y = j
+for x in range(2001):
+    for y in range(2001):
+        if dp[x][y] == 1:
+            if x < min_x:
+                min_x = x
+            if x > max_x:
+                max_x = x
+            if y < min_y:
+                min_y = y
+            if y > max_y:
+                max_y = y
 
-# 경계값들을 통해 사각형의 가로·세로 길이 계산
-width = (max_x - min_x + 1)
-height = (max_y - min_y + 1)
+width = max_x - min_x + 1
+height = max_y - min_y + 1
 
-red_area = width * height
-print(red_area)
+
+print(width * height) # 5 * 3 = 15
