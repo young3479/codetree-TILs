@@ -25,5 +25,8 @@ for i in info:
     if x == 0 and y == 0:
         break
 
+if x != 0 and y != 0:
+    time = -1
+    
 print(time)
 
