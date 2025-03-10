@@ -29,6 +29,13 @@ for i in info:
     if exit_flag:
         break
 
+    # 만일 다 돌았음에도 처음으로 못돌아오면 -1 반환
+    
+if x != 0 and y != 0:
+    time = -1
+
+
+
     
 print(time)
 
