@@ -7,17 +7,19 @@ for _ in range(n):
     c.append(char)
 
 dp = [0] * (max(x)+1)
+print("mm",max(x))
 
 for i in range(n):
     if c[i] == 'G':
         dp[x[i]] += 1
     elif c[i] == 'H':
         dp[x[i]] += 2
-        
+
 ans = 0
 for i in range(1, len(dp)-k+2):
     dist = 0
     dist = sum(dp[i:i+k+1])
+    print(i, i+k, dist)
 
     ans = max(dist, ans)
 
