@@ -6,8 +6,10 @@ for _ in range(n):
     x.append(int(pos))
     c.append(char)
 
-dp = [0] * (max(x)+1)
-print("mm",max(x))
+if k > max(x) + 1:
+    dp = [0] * k
+else:
+    dp = [0] * (max(x)+1)
 
 for i in range(n):
     if c[i] == 'G':
@@ -19,7 +21,6 @@ ans = 0
 for i in range(1, len(dp)-k+2):
     dist = 0
     dist = sum(dp[i:i+k+1])
-    print(i, i+k, dist)
 
     ans = max(dist, ans)
 
