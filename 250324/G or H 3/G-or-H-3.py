@@ -10,14 +10,15 @@ dp = [0] * (max(x)+1)
 
 for i in range(n):
     if c[i] == 'G':
-        dp[x[i]] += 2
-    else:
         dp[x[i]] += 1
+    else:
+        dp[x[i]] += 2
+
 
 ans = 0
 for i in range(1, len(dp)-k):
     dist = 0
-    dist = sum(dp[i:i+k])
+    dist = sum(dp[i:i+k+1])
 
     ans = max(dist, ans)
 
