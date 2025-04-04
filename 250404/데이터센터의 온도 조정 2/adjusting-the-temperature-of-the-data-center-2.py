@@ -18,7 +18,7 @@ def temperature(i, a, b):
     return t
 
 answer = -sys.maxsize
-for i in range(min_a, max_b):
+for i in range(min_a, max_b+1):
     # i일때 각각의 경우(=N번)를 전부 따져볼 것
     a = 0
     ans = []
