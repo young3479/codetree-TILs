@@ -11,6 +11,7 @@ for i in range(X, Y+1):
     #방법 2. 숫자를 하나씩 끊어서 list에 담고 sum()
 
     #만일 i가 세자리수 이상이면 계속 돌아야함
+    total = 0
     while(i>9):
         sec = i//10
         fir = i%10
