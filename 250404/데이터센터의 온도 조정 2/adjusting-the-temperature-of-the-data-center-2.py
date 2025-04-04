@@ -18,7 +18,8 @@ def temperature(i, a, b):
     return t
 
 answer = -sys.maxsize
-for i in range(min_a, max_b+1):
+#작을때 작업량이 더 높을 수 있으니 1부터 시작해야함(min_a가 아닌)
+for i in range(1, max_b+1): 
     # i일때 각각의 경우(=N번)를 전부 따져볼 것
     a = 0
     ans = []
